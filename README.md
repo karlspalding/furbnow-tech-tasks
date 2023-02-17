@@ -17,6 +17,8 @@ In this app, please create the following functionality:
 - Add a `recommended` field to the `Measure` model and highlight recommended measures on the `/measures` page
 - Allow users to select measures and display the total cost of all the selected measures
 
+Suggest some further directions for this feature and note how you would implement them.
+
 ## Notes
 
 Please only spend a maximum of 2-3 hours on this task. We are not looking for a finished product, but rather a demonstration of your approach to solving problems and your ability to learn new technologies.  
