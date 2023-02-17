@@ -13,7 +13,7 @@ To run the project, navigate to the `app` directory and run `python manage.py ru
 Furbnow works with our customers to offer them various options for energy efficiency measures and low carbon technologies, like cavity wall insulation or solar panels.  
 
 In this app, please create the following functionality:
-- Show all the available measures on the `/measures` page (feel free to add a selection of measures in a sensible way)
+- Show all the available measures on the `/measures` page (you will need to add some sample data)
 - Add a `recommended` field to the `Measure` model and highlight recommended measures on the `/measures` page
 - Allow users to select measures and display the total cost of all the selected measures
 
