@@ -7,9 +7,23 @@
   <div class="container">
     <h1 class="title">Measures</h1>
     {% for measure in measures %}
-    <div class="card">
+    <div class="card {% if measure.recommended %}has-background-success-light{% endif %}">
       <div class="card-content">
+
         <div class="media">
+          {% if measure.recommended %}
+          <div class="media-left">
+            <span class="icon">
+              <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g stroke-width="0"></g>
+                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                <g>
+                  <path d="M4 7.5L7 10L11 5M7.5 14.5C3.63401 14.5 0.5 11.366 0.5 7.5C0.5 3.63401 3.63401 0.5 7.5 0.5C11.366 0.5 14.5 3.63401 14.5 7.5C14.5 11.366 11.366 14.5 7.5 14.5Z" stroke="#2e9e24"></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+          {% endif %}
           <div class="media-content">
             <p class="title is-4">{{ measure.name }}</p>
             <p class="subtitle is-6">{{ measure.cost }}</p>
