@@ -148,3 +148,8 @@ fabric.properties
 .idea/**/azureSettings.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,pycharm
+
+*.swp
+venv
+*.sqlite3
+**/__pycache__/
