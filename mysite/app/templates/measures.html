@@ -14,7 +14,7 @@
       <div class="navbar-end">
         <div class="title navbar-item">
           <span>Total&nbsp;</span>
-          <span x-text="total"></span>
+          <span x-text="Intl.NumberFormat('en-GB', {style: 'currency', currency: 'GBP'}).format(total)"></span>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
           {% endif %}
           <div class="media-content">
             <p class="title is-4">{{ measure.name }}</p>
-            <p class="subtitle is-6">{{ measure.cost }}</p>
+            <p class="subtitle is-6" x-text="Intl.NumberFormat('en-GB', {style: 'currency', currency: 'GBP'}).format(cost)"></p>
           </div>
         </div>
 
