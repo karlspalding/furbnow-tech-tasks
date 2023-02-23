@@ -7,7 +7,12 @@
   <div class="container">
     <h1 class="title">Measures</h1>
     {% for measure in measures %}
-    <div class="card {% if measure.recommended %}has-background-success-light{% endif %}">
+    <div
+      x-data="{ selected: false }"
+      x-on:click="selected = !selected"
+      x-bind:class="selected ? 'has-background-primary' : '{% if measure.recommended %}has-background-success-light{% endif %}'"
+      class="card is-clickable"
+    >
       <div class="card-content">
 
         <div class="media">
