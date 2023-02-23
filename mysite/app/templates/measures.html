@@ -3,13 +3,30 @@
 {% block title %}Measures{% endblock %}
 
 {% block content %}
+<div class="navbar is-fixed-top">
+  <div class="container">
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <div class="title navbar-item">
+          Measures
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="title navbar-item">
+          <span>Total&nbsp;</span>
+          <span x-text="total"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section class="section">
   <div class="container">
-    <h1 class="title">Measures</h1>
     {% for measure in measures %}
     <div
-      x-data="{ selected: false }"
-      x-on:click="selected = !selected"
+      x-data="{ selected: false, cost: {{ measure.cost }} }"
+      x-on:click="if (selected) { selected = false; total -= cost } else { selected = true; total += cost }"
       x-bind:class="selected ? 'has-background-primary' : '{% if measure.recommended %}has-background-success-light{% endif %}'"
       class="card is-clickable"
     >
